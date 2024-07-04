@@ -1,0 +1,57 @@
+// In this file you can override the default variables of Bootstrap
+// Do you want primary to be green? Just add "$primary: #00FF00;" to this file and the theme will automatically compile the scss for you.
+
+@font-face {
+  font-family: 'charterbold_italic';
+  src: url('../fonts/charter_bold_italic-webfont.eot');
+  src: url('../fonts/charter_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/charter_bold_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'charterbold';
+  src: url('../fonts/charter_bold-webfont.eot');
+  src: url('../fonts/charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/charter_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'charteritalic';
+  src: url('../fonts/charter_italic-webfont.eot');
+  src: url('../fonts/charter_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/charter_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'charterregular';
+  src: url('../fonts/charter_regular-webfont.eot');
+  src: url('../fonts/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/charter_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Kefa-Regular";
+  src: url("../fonts/Kefa-Regular.eot");
+  src: url("../fonts/Kefa-Regular.eot?#iefix")format("embedded-opentype"),
+      url("../fonts/Kefa-Regular.woff") format('woff');
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
+
+$white:         #F1EEE8 !default;
+$headings-color: #3B7889 !default;
+$primary:        #B0485E !default;
+$font-family-sans-serif: 'charterregular', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-size-base:  1.4rem !default;
+$display-font-family: 'Kefa-Regular' !default;
+$h1-font-size: 2rem;
+$body-color: #3B7889 !default;

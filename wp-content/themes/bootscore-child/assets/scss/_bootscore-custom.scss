@@ -1,0 +1,225 @@
+/*!
+ * Bootscore custom styles
+ */
+
+// Add your own code here!
+// Because this file is compiled after Bootstrap, you're also able to use Bootstrap mixins for better code.
+// Some examples can be found here: https://bootscore.me/documentation/bootstrap-css-sass
+
+@font-face {
+  font-family: 'charterbold_italic';
+  src: url('charter_bold_italic-webfont.eot');
+  src: url('charter_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('charter_bold_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'charterbold';
+  src: url('charter_bold-webfont.eot');
+  src: url('charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('charter_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'charteritalic';
+  src: url('charter_italic-webfont.eot');
+  src: url('charter_italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('charter_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'charterregular';
+  src: url('charter_regular-webfont.eot');
+  src: url('charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('charter_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family-base: 'charterregular';
+$font-size-base: 1.2 rem;
+$line-height-base: 1.8 rem;
+
+h1,.h1 {
+  font-size: calc(3rem + 0.9vw);
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: 700;
+}
+
+.p2 {
+  text-indent: 2rem;
+}
+
+a.nav-link.active {
+  background-color: $primary;
+  color:            $white;
+}
+
+.top-button {
+  bottom: 3.3rem;
+}
+
+.glb {
+
+  &-pageSearchTemplate form {
+    width: 100%;
+  }
+
+  &-pageSearchTemplate .form-control {
+    border-color: #6c757d;
+  }
+
+  &-vh-60 {
+    height: 60vh;
+  }
+
+  &-navbar .navbar-nav .nav-link {
+    color: $white;
+
+    &.active {
+      background-color: $white;
+      color: $body-color;
+    }
+  }
+
+  &-footer {
+    filter: drop-shadow(-1px -1px 1px #abc7ca);
+    width: 100vw;
+  }
+
+  &-udarAnSceal,
+  &-leitheoirAnSceal {
+    font-weight: 700;
+  }
+
+  &-anSceal {
+    background-color: white;
+
+    & .p2:first-child {
+      text-indent: 0;
+
+      &::first-letter {
+        float: left;
+        font-size: 8rem;
+        line-height: 5.8rem;
+        padding-right: 3px;
+        text-indent: 0 !important;
+      }
+    }
+  }
+
+  &-maxWidth-900 {
+    max-width: 800px;
+  }
+
+  &-firstCharacter {
+    float: left;
+    font-size: 8rem;
+    line-height: 5.8rem;
+    padding-right: 3px;
+    text-indent: 0 !important;
+  }
+
+  &-leitheoirAnSceal {
+    color: var(--bs-primary);
+  }
+
+  &-leitheoirAnSceal, 
+  &-udarAnSceal {
+    font-family: charterbold;
+  }
+
+  &-teidealAnSceal {
+    font-family: charterbold_italic;
+  }
+
+  &-scealCarta .h3 {
+    font-weight: 400;
+  }
+
+  &-noIndent {
+    text-indent: 0;
+  }
+
+  &-tightLineHeight {
+    margin-bottom: .2rem;
+  }
+}
+
+// Audio Player Styles 
+
+.ppjs__episode-title {
+  display: none;
+}
+
+.pp-podcast {
+  margin-bottom: 0 !important;
+  position: sticky !important;
+  top: 0px;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.pp-podcast .icon,
+.pp-podcast .play-rate-text,
+.pp-podcast .ppjs__time {
+  color: $body-color;
+}
+
+.pp-podcast .ppjs__audio .ppjs__button .play-rate-text {
+  border: .09em solid $body-color;
+}
+
+body.sceal-template-default {
+  overflow-x: unset !important;
+}
+
+// Text Animation Styles
+
+.typewriter h1 {
+  color: $headings-color;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end ;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+@include media-breakpoint-up(md) { 
+
+  .pp-podcast {
+    top: 4rem !important;
+  }
+ }
