@@ -27,7 +27,10 @@ get_header();
         <!-- Header -->
         <div class="row mb-4">
           <h1 class="glb-maxWidth-900 mx-auto"><?php bloginfo('name'); ?></h1>
-          <p class="lead glb-maxWidth-900 mx-auto mb-5"><?php bloginfo('description'); ?></p>
+          <p class="lead glb-maxWidth-900 mx-auto mb-3">
+            <?php bloginfo('description'); ?>
+          </p>
+          <p class="lead glb-maxWidth-900 mx-auto mb-5">Gach seachtain craolfar scéal úr…</p>
           <hr class="glb-maxWidth-900 mx-auto"/>
         </div>
 
@@ -152,15 +155,18 @@ get_header();
                     ?>
 
                     <div class="col">
-                      <div class="card-body glb-scealCarta">
+                      <div class="card-body glb-scealCarta <?php if(get_post_status() === 'future') { echo 'unpublished'; } ?>">
                         <?php bootscore_category_badge(); ?>
                         <p class="mb-1 h3">
                           <span class="glb-leitheoirAnSceal">
                             <?php the_field('leitheoir_an_sceal') ?>
                           </span> ag léamh
-                          <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
-                            <?php the_title('<span class="blog-post-title h3 glb-teidealAnSceal">', '</span>'); ?>
-                          </a>le <span class="glb-udarAnSceal">
+                          <?php if(get_post_status() === 'publish') : ?>
+                            <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
+                          <?php endif; ?>
+                          <?php the_title('<span class="blog-post-title h3 glb-teidealAnSceal">', '</span>'); ?>
+                          <?php if(get_post_status() === 'publish') : ?></a><?php endif; ?>
+                            le <span class="glb-udarAnSceal">
                             <?php the_field('udar_an_sceal') ?>
                           </span>
                         </p>

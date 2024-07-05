@@ -148,6 +148,11 @@ a.nav-link.active {
 
   &-teidealAnSceal {
     font-family: charterbold_italic;
+    white-space: nowrap;
+  }
+
+  &-scealCarta.unpublished {
+    opacity: 70%;
   }
 
   &-scealCarta .h3 {
